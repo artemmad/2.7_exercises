@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQ_C = 0;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                         i = new Intent(MainActivity.this, ToInfActivity.class);
                         String eText = et.getText().toString();
                         i.putExtra("et", eText);
+                        i.putExtra("str", "Some random string");
                         startActivity(i);
                         break;
                     case R.id.button3:
@@ -50,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(listener);
         button2.setOnClickListener(listener);
         button3.setOnClickListener(listener);
+
+        Toast.makeText(MainActivity.this,"lol kek", Toast.LENGTH_LONG).show();
+
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

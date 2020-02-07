@@ -17,6 +17,7 @@ public class ToInfActivity extends AppCompatActivity {
         setContentView(R.layout.toinfactivity);
         tv= (TextView) findViewById(R.id.tv);
         String str = getIntent().getStringExtra("et");
-        tv.setText(str);
+        String str2 = getIntent().getStringExtra("str");
+        tv.setText(str + "      "+ str2);
     }
 }
